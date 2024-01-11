@@ -78,13 +78,74 @@ Skewness of log-transformed data: 0.6645397828927238
 <img src="./EDA/list_price_skewness.png"  />
 
 
-
-
 #### 'price_per_sqft': Numerical
 Skewness of original data: 78.13892297168798
 
 Skewness of log-transformed data: 0.27697626845400514
 
-<img src="./EDA/price_per_sqft_skewness"  />
+<img src="./EDA/price_per_sqft_skewness.png"  />
+
+
+## Rescaling data for help ANN learn faster
+As artificial neural networks (ANN) rely on gradient-based algorithms, it is advisable to rescale the data. In this context, the only feature requiring rescaling was the "year of build."
+
+
+### Cities
+This dataset encompasses information from 94 cities within NYC, with a shape of (10878, 6). The leading cities with the highest volume of "for sale" data include:
+
+
+|  |  |
+| --- | --- |
+| city | count |
+| Brooklyn | 2871 |
+| New York | 2698 |
+| Bronx | 1005 |
+| Staten Island | 967 |
+| Manhattan | 939 |
+| Flushing | 492 |
+| Queens | 241 |
+| Forest Hills | 141 |
+| Jamaica | 129 |
+| Bayside | 83 |
+
+
+To build a prediction model for housing price specifically for New York City, the dataset's limited size of 2698 records posed a challenge in building a reliable model. To overcome this problem, I implemented transfer learning, where an initial model was trained on the entire dataset which was 10878 records, and this pre-trained model was further utilized to train a new model exclusively incorporating data from New York City.
+
+
+## Results and Output of the Models
+
+### NYC city model 
+I constructed an Artificial Neural Network (ANN) model using the New York City dataset, which consisted of 2698 rows and 6 columns, including the 6 features mentioned earlier.
+
+The neural network comprised 4 layers, and the hyperparameters were configured as follows:
+
+- Activation function for hidden layers: relu
+- Activation function for the output layer: linear
+- Optimizer: Adam
+- Learning rate: 0.0001
+- Batch size: 32
+- Epochs: 50
+- Loss function: mean_squared_error
+
+#### The evaluation metrics for this model included:
+
+-Mean Squared Error (MSE): 0.45096153027927854
+- Root Mean Squared Error (RMSE): 0.6715366931741545
+- Mean Absolute Error (MAE): 0.538360731307571
+- R-squared for test data (R²): 0.6508851410847962
+- R-squared for train data(R²): 0.6327752621273862
+
+#### The learning curve for NYC_city model
+This learning curve is showing the change of Mean Squared Error 
+
+<img src="./output/nyc_city_learning_curve.png"  />
+
+#### Regression line for NYC_city model
+<img src="./output/nyc_city_reg_line.png"  />
+
+### All cities Model
+
+### Transfer learning Model
+
 
 
