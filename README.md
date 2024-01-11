@@ -14,7 +14,7 @@ Data for this project were collected using web scraping techniques from realtor.
 ## Handling duplicated values
 There were 364 duplicate values in the dataset which were removed.
 
-## Handling null values
+### Handling null values
 Before examining null values, irrelevant features were excluded from consideration for the project's objectives. Following this removal, the remaining features were assessed for the presence of null values.
 | Feature          | Null Values |
 |------------------|-------------|
@@ -30,7 +30,7 @@ Before examining null values, irrelevant features were excluded from considerati
 After eliminating all null values, the dataset now has a shape of (10867, 14).
 
 
-## Addressing outliers
+### Addressing outliers
 
 The existing features in the dataset include:
 
