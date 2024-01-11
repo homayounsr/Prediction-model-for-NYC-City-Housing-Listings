@@ -145,7 +145,62 @@ This learning curve is showing the change of Mean Squared Error
 
 ### All cities Model
 
+**The hyperparamethers for this model:**
+
+- Activation function for hidden layers: relu
+- Activation function for output layer: linear
+- learning rate: 0,001
+- optimizer: adam
+- epoch: 10
+- batch size: 32
+- loss: mean_squared_error
+
+
+**The result for evaluation metrics of All_model:**
+
+- Mean Squared Error (MSE): 0.13552753832605624
+- Root Mean Squared Error (RMSE): 0.36814065019507997
+- Mean Absolute Error (MAE): 0.29220021858898937
+- R-squared for test data (R²): 0.8613360507658722
+- R-squared for train data(R²): 0.8717035628502933
+
+#### The learning curve for All_city model
+This learning curve is showing the change of Mean Squared Error 
+
+<img src="./output/all_cities_leaning_curve.png"  />
+
+#### Regression line for All_city model
+<img src="./output/all_city_reg_line.png"  />
+
+
+
 ### Transfer learning Model
 
+I preserved the model trained on 94 cities by removing the output layer and appending a new output layer while retaining the structure of the hidden layers.
+
+The hyperparameters for this modified model were specified as follows:
+
+- Activation function for the output: linear
+- Learning rate: 0.0001
+- Optimizer: Adam
+- Epochs: 10
+- Batch size: 32
+- Loss function: mean_squared_error
+
+**The result for evaluation metrics for TrasferLearning_Model:**
+
+- Mean Squared Error (MSE): 0.10820972617796998
+- Root Mean Squared Error (RMSE): 0.3289524679615126
+- Mean Absolute Error (MAE): 0.24296718998881373
+- R-squared for test data (R²): 0.9208797537443263
+- R-squared for train data(R²): 0.9119134902631103
+
+#### The learning curve for TrasferLearning_Model:
+This learning curve is showing the change of Mean Squared Error 
+
+<img src="./output/transfer_learning_curve.png"  />
+
+#### Regression line for TrasferLearning_Model:
+<img src="./output/transfer_leanring_reg_line.png"  />
 
 
