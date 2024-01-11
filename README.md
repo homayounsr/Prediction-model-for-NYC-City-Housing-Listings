@@ -118,7 +118,9 @@ I developed three different models to observe the variance in R2 which is a comm
 1. Model trained on NYC city data
 2. Model trained on all 94 cities of NYC state
 3. Model trained on NYC city data with the help of transfred knowledge of Model 2
-4. 
+
+
+
 ### NYC city model 
 I constructed an Artificial Neural Network (ANN) model using the New York City dataset, which consisted of 2698 rows and 6 columns, including the 6 features mentioned earlier.
 
