@@ -3,3 +3,4 @@
 
 Data for this project were collected using web scraping techniques from realtor.com. The dataset includes information on houses listed for sale from 2021 to 2024.
 ###  Number of records for each year
+<img src="./EDA/count_data_year.png"  />
