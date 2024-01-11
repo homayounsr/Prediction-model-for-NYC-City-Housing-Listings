@@ -45,12 +45,46 @@ To address skewness in the data, I applied a log transform to achieve a Gaussian
 
 
 
+#### 'beds': Numerical
+Skewness of original data: 4.739426354647343
+
+Skewness of log-transformed data: 0.017194484194333386
+
+<img src="./EDA/bed_skewness.png"  />
+
+#### 'full_baths': Numerical
+Skewness of original data: 9.743926203602364
+
+Skewness of log-transformed data: 1.1508611341350268
+
+<img src="./EDA/full_bath_skewness.png"  />
 
 
 
 
+#### 'sqft': Numerical
+Skewness of original data: 12.721288454241067
+
+Skewness of log-transformed data: 0.6630027058848263
+
+<img src="./EDA/sqft_skewness.png"  />
+
+
+#### 'list_price': Numerical
+Skewness of original data: 96.04967635617102
+
+Skewness of log-transformed data: 0.6645397828927238
+
+<img src="./EDA/list_price_skewness.png"  />
 
 
 
+
+#### 'price_per_sqft': Numerical
+Skewness of original data: 78.13892297168798
+
+Skewness of log-transformed data: 0.27697626845400514
+
+<img src="./EDA/price_per_sqft_skewness"  />
 
 
